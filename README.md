@@ -18,7 +18,7 @@ The project's main focus is to understand how time-domain and broadband analyses
 
 This demonstrates how coherent periodic signals are extracted from noisy astrophysical data and why phase coherence supports a rotation-powered interpretation.
 
-**2. Toy physical SED (Marsh et al. Figure 4)**
+**2. Toy physical SED (Marsh et al. (2016), Figure 4)**
 
 - Thermal blackbody emission from the M-dwarf companion
 
