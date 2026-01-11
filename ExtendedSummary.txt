@@ -1,0 +1,57 @@
+## Time-series analysis of AR Sco-like variability ##
+
+In this mini-project, I reproduced the key time-series analysis steps used to study the white dwarf pulsar AR Scorpii, 
+following the methodology presented in Marsh et al. (2016). The aim was to understand how periodic signals can be extracted 
+from noisy astrophysical data and how these techniques distinguish between rotation-powered and accretion-driven variability.
+
+The starting point was a simulated light curve containing a weak periodic signal embedded in stochastic noise, 
+representative of high-cadence photometric or radio observations. In the raw time domain, the periodic behaviour is not immediately 
+apparent because the intrinsic variability and observational noise dominate the signal. This motivates the use of period-search and 
+phase-folding techniques, which are standard tools in time-domain astrophysics.
+
+Using a Lomb–Scargle periodogram, I identified the dominant periodicity in the data. This method is particularly well suited to 
+astronomical observations, which are often unevenly sampled. The detection of a strong, narrow peak in the periodogram indicates the 
+presence of a coherent, stable periodic signal. In the context of AR Sco, such coherence is interpreted as evidence for rotation-powered 
+emission, associated with the white dwarf spin and beat frequencies, rather than accretion processes.
+
+Once the period was identified, the light curve was phase-folded on this period. Phase folding stacks multiple cycles of the signal, 
+causing coherent variations to add constructively while random noise averages out. This results in a significant improvement in 
+signal-to-noise ratio and reveals the underlying pulse profile. The folded pulse shape and its modulation amplitude provide direct 
+information about the emission geometry and physical mechanism powering the variability.
+
+This behaviour contrasts strongly with accretion-driven variability, which typically produces stochastic, aperiodic fluctuations without 
+long-term phase coherence. The presence of a stable pulse profile after folding therefore supports a rotation-powered interpretation, 
+consistent with the white dwarf pulsar model proposed for AR Scorpii.
+
+Although this analysis was carried out on simulated data, the same workflow applies directly to real observations, including radio 
+time-series data from the Very Large Array (VLA). Period searching, phase folding, and quantitative pulse-profile analysis are essential 
+techniques for identifying and characterising accreting and explosive radio transients, as well as long-period and white-dwarf pulsar systems. 
+This mini-project therefore closely mirrors the analysis techniques required for the advertised PhD project at Warwick and demonstrates 
+preparedness for radio time-domain data analysis.
+
+## Toy physical spectral energy distribution (SED) of AR Sco-like emission ##
+
+To complement the time-series analysis, I constructed a simplified, physically motivated spectral energy distribution (SED) to explore how 
+different emission mechanisms contribute across frequency for an AR Sco–like system. The goal of this exercise was not to reproduce the 
+detailed observational fit of Marsh et al. (2016), but to understand how thermal and non-thermal components combine to produce the broadband 
+behaviour observed in white dwarf pulsars.
+
+The toy SED consists of three components: thermal blackbody emission from the M-dwarf companion, thermal emission from the white dwarf, 
+and a non-thermal power-law component representing synchrotron radiation. The stellar components were modelled using Planck functions with 
+representative temperatures and radii, while the non-thermal component was included to mimic emission from relativistic electrons accelerated 
+by the rotating magnetic field of the white dwarf. By constructing each component separately and combining them, I was able to visualise how 
+distinct physical processes dominate in different frequency regimes.
+
+The SED was plotted in the standard νF_ν representation, allowing direct qualitative comparison with Figure 4 of Marsh et al. (2016). 
+Initially, the model produced unphysically small flux values because it evaluated the Planck function deep into the exponential Wien tail 
+without observational normalisation. This was addressed by restricting the frequency range to the observationally relevant regime and rescaling 
+the combined SED to a representative flux level. While the resulting model remains a toy description, it correctly reproduces the relative 
+dominance of non-thermal synchrotron emission at radio frequencies and thermal stellar emission at optical and ultraviolet frequencies.
+
+This exercise highlights why thermal emission alone cannot explain the observed radio brightness of AR Sco, and why a rotation-powered, non-thermal 
+emission mechanism is required. Constructing the SED therefore provides an independent, frequency-domain perspective that complements the time-domain 
+analysis, reinforcing the interpretation of AR Sco as a white dwarf pulsar rather than an accretion-powered system.
+
+Although simplified, this toy SED captures the essential physical intuition behind broadband modelling of accreting and explosive radio transients. 
+Building and interpreting such models is important in understanding the interplay between time-domain variability and spectral behaviour for 
+identifying the physical nature of newly discovered radio transients.
