@@ -7,7 +7,7 @@ Marsh et al. (2016), “Radio detection of the white dwarf pulsar AR Scorpii” 
 
 The project's main focus is to understand how time-domain and broadband analyses distinguish rotation-powered white dwarf pulsars from accretion-driven variability.
 
-# What is done here
+# Content
 **1. Time-series analysis (Marsh et al. (2016), Figures 2–3)**
 
 - Simulated noisy light curve with a weak periodic signal
